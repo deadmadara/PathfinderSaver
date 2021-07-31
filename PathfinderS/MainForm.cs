@@ -14,7 +14,7 @@ namespace PathfinderS
     public partial class mainForm : Form
     {
         Player MainPlayer = new Player();
-        string SavedFileName;
+        string SavedFileName = "";
      
         public mainForm()
         {
@@ -177,6 +177,7 @@ namespace PathfinderS
         void NewItem_Click(object sender, EventArgs e)
         {
             MainPlayer = new Player();
+            SavedFileName = "";
             FillFormFromObject();
         }
 
@@ -218,6 +219,20 @@ namespace PathfinderS
                 string JsonString = JsonConvert.SerializeObject(MainPlayer);
                 System.IO.File.WriteAllText(SavedFileName, JsonString);
             }
+            else MessageBox.Show("File is not found!");
+        }
+
+        void CalculateStats_Click(object sender, EventArgs e)
+        {
+            ReadFormToObject();
+
+            textBoxINItotal.Text = MainPlayer.ComputeInitiative().ToString();
+            textBoxMELtotal.Text = MainPlayer.ComputeMelee().ToString();
+            textBoxDISTtotal.Text = MainPlayer.ComputeDistance().ToString();
+            textBoxFORtotal.Text = MainPlayer.ComputeFortitude().ToString();
+            textBoxREFtotal.Text = MainPlayer.ComputeReflex().ToString();
+            textBoxWILLtotal.Text = MainPlayer.ComputeWill().ToString();
+            textBoxACtotal.Text = MainPlayer.ComputeArmorClass().ToString();
         }
 
         int CheckCorrectInt(string str)

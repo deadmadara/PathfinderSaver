@@ -163,12 +163,14 @@ namespace PathfinderS
             this.textBoxSpeed = new System.Windows.Forms.TextBox();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxSpells = new System.Windows.Forms.GroupBox();
             this.richTextBoxSpecs = new System.Windows.Forms.RichTextBox();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxAbilities.SuspendLayout();
             this.groupBoxAttacks.SuspendLayout();
             this.groupBoxWeapons.SuspendLayout();
@@ -531,6 +533,7 @@ namespace PathfinderS
             this.textBoxINItotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxINItotal.Location = new System.Drawing.Point(78, 26);
             this.textBoxINItotal.Name = "textBoxINItotal";
+            this.textBoxINItotal.ReadOnly = true;
             this.textBoxINItotal.Size = new System.Drawing.Size(31, 26);
             this.textBoxINItotal.TabIndex = 31;
             this.textBoxINItotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -569,6 +572,7 @@ namespace PathfinderS
             this.textBoxINI2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxINI2.Location = new System.Drawing.Point(181, 26);
             this.textBoxINI2.Name = "textBoxINI2";
+            this.textBoxINI2.ReadOnly = true;
             this.textBoxINI2.Size = new System.Drawing.Size(31, 26);
             this.textBoxINI2.TabIndex = 36;
             this.textBoxINI2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -655,6 +659,7 @@ namespace PathfinderS
             this.textBoxDISTtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxDISTtotal.Location = new System.Drawing.Point(78, 109);
             this.textBoxDISTtotal.Name = "textBoxDISTtotal";
+            this.textBoxDISTtotal.ReadOnly = true;
             this.textBoxDISTtotal.Size = new System.Drawing.Size(31, 26);
             this.textBoxDISTtotal.TabIndex = 47;
             this.textBoxDISTtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -685,6 +690,7 @@ namespace PathfinderS
             this.textBoxDIST2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxDIST2.Location = new System.Drawing.Point(181, 109);
             this.textBoxDIST2.Name = "textBoxDIST2";
+            this.textBoxDIST2.ReadOnly = true;
             this.textBoxDIST2.Size = new System.Drawing.Size(31, 26);
             this.textBoxDIST2.TabIndex = 52;
             this.textBoxDIST2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -734,6 +740,7 @@ namespace PathfinderS
             this.textBoxMELtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxMELtotal.Location = new System.Drawing.Point(78, 68);
             this.textBoxMELtotal.Name = "textBoxMELtotal";
+            this.textBoxMELtotal.ReadOnly = true;
             this.textBoxMELtotal.Size = new System.Drawing.Size(31, 26);
             this.textBoxMELtotal.TabIndex = 39;
             this.textBoxMELtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -764,6 +771,7 @@ namespace PathfinderS
             this.textBoxMEL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxMEL2.Location = new System.Drawing.Point(181, 67);
             this.textBoxMEL2.Name = "textBoxMEL2";
+            this.textBoxMEL2.ReadOnly = true;
             this.textBoxMEL2.Size = new System.Drawing.Size(31, 26);
             this.textBoxMEL2.TabIndex = 44;
             this.textBoxMEL2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -802,6 +810,7 @@ namespace PathfinderS
             this.textBoxACtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxACtotal.Location = new System.Drawing.Point(103, 22);
             this.textBoxACtotal.Name = "textBoxACtotal";
+            this.textBoxACtotal.ReadOnly = true;
             this.textBoxACtotal.Size = new System.Drawing.Size(31, 26);
             this.textBoxACtotal.TabIndex = 55;
             this.textBoxACtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1242,6 +1251,7 @@ namespace PathfinderS
             this.textBoxFORtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxFORtotal.Location = new System.Drawing.Point(84, 23);
             this.textBoxFORtotal.Name = "textBoxFORtotal";
+            this.textBoxFORtotal.ReadOnly = true;
             this.textBoxFORtotal.Size = new System.Drawing.Size(31, 26);
             this.textBoxFORtotal.TabIndex = 55;
             this.textBoxFORtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1272,6 +1282,7 @@ namespace PathfinderS
             this.textBoxFOR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxFOR2.Location = new System.Drawing.Point(186, 22);
             this.textBoxFOR2.Name = "textBoxFOR2";
+            this.textBoxFOR2.ReadOnly = true;
             this.textBoxFOR2.Size = new System.Drawing.Size(31, 26);
             this.textBoxFOR2.TabIndex = 60;
             this.textBoxFOR2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1321,6 +1332,7 @@ namespace PathfinderS
             this.textBoxREFtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxREFtotal.Location = new System.Drawing.Point(84, 66);
             this.textBoxREFtotal.Name = "textBoxREFtotal";
+            this.textBoxREFtotal.ReadOnly = true;
             this.textBoxREFtotal.Size = new System.Drawing.Size(31, 26);
             this.textBoxREFtotal.TabIndex = 75;
             this.textBoxREFtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1351,6 +1363,7 @@ namespace PathfinderS
             this.textBoxREF2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxREF2.Location = new System.Drawing.Point(186, 64);
             this.textBoxREF2.Name = "textBoxREF2";
+            this.textBoxREF2.ReadOnly = true;
             this.textBoxREF2.Size = new System.Drawing.Size(31, 26);
             this.textBoxREF2.TabIndex = 80;
             this.textBoxREF2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1400,6 +1413,7 @@ namespace PathfinderS
             this.textBoxWILLtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxWILLtotal.Location = new System.Drawing.Point(84, 106);
             this.textBoxWILLtotal.Name = "textBoxWILLtotal";
+            this.textBoxWILLtotal.ReadOnly = true;
             this.textBoxWILLtotal.Size = new System.Drawing.Size(31, 26);
             this.textBoxWILLtotal.TabIndex = 86;
             this.textBoxWILLtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1430,6 +1444,7 @@ namespace PathfinderS
             this.textBoxWILL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxWILL2.Location = new System.Drawing.Point(186, 106);
             this.textBoxWILL2.Name = "textBoxWILL2";
+            this.textBoxWILL2.ReadOnly = true;
             this.textBoxWILL2.Size = new System.Drawing.Size(31, 26);
             this.textBoxWILL2.TabIndex = 91;
             this.textBoxWILL2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1554,10 +1569,11 @@ namespace PathfinderS
             // 
             // menuStripMain
             // 
-            this.menuStripMain.BackColor = System.Drawing.SystemColors.Window;
+            this.menuStripMain.BackColor = System.Drawing.SystemColors.MenuBar;
             this.menuStripMain.Font = new System.Drawing.Font("Arial", 9F);
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.statsToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
             this.menuStripMain.Size = new System.Drawing.Size(684, 24);
@@ -1575,17 +1591,31 @@ namespace PathfinderS
             this.toolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.toolStripMenuItem1.Text = "File";
             // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.NewItem_Click);
+            // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.saveAsToolStripMenuItem.Text = "Save as";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsItem_Click);
             // 
@@ -1609,19 +1639,20 @@ namespace PathfinderS
             this.richTextBoxSpecs.TabIndex = 99;
             this.richTextBoxSpecs.Text = "";
             // 
-            // newToolStripMenuItem
+            // statsToolStripMenuItem
             // 
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newToolStripMenuItem.Text = "New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.NewItem_Click);
+            this.statsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculateToolStripMenuItem});
+            this.statsToolStripMenuItem.Name = "statsToolStripMenuItem";
+            this.statsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.statsToolStripMenuItem.Text = "Stats";
             // 
-            // saveToolStripMenuItem
+            // calculateToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveItem_Click);
+            this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculateToolStripMenuItem.Text = "Calculate ";
+            this.calculateToolStripMenuItem.Click += new System.EventHandler(this.CalculateStats_Click);
             // 
             // mainForm
             // 
@@ -1656,6 +1687,7 @@ namespace PathfinderS
             this.MaximumSize = new System.Drawing.Size(700, 500);
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "mainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PathfinderSaver v.0.1";
             this.groupBoxAbilities.ResumeLayout(false);
             this.groupBoxAbilities.PerformLayout();
@@ -1817,6 +1849,8 @@ namespace PathfinderS
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
     }
 }
 
