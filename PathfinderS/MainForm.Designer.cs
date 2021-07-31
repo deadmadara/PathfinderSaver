@@ -90,7 +90,6 @@ namespace PathfinderS
             this.textBoxMEL2 = new System.Windows.Forms.TextBox();
             this.textBoxMEL1 = new System.Windows.Forms.TextBox();
             this.labelPlus2 = new System.Windows.Forms.Label();
-            this.labelAC = new System.Windows.Forms.Label();
             this.textBoxACtotal = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxAC2 = new System.Windows.Forms.TextBox();
@@ -167,10 +166,10 @@ namespace PathfinderS
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBoxSpells = new System.Windows.Forms.GroupBox();
-            this.richTextBoxSpecs = new System.Windows.Forms.RichTextBox();
             this.statsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBoxSpells = new System.Windows.Forms.GroupBox();
+            this.richTextBoxSpecs = new System.Windows.Forms.RichTextBox();
             this.groupBoxAbilities.SuspendLayout();
             this.groupBoxAttacks.SuspendLayout();
             this.groupBoxWeapons.SuspendLayout();
@@ -188,7 +187,7 @@ namespace PathfinderS
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxName.Location = new System.Drawing.Point(67, 24);
+            this.textBoxName.Location = new System.Drawing.Point(57, 24);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -199,7 +198,7 @@ namespace PathfinderS
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelName.Location = new System.Drawing.Point(12, 27);
+            this.labelName.Location = new System.Drawing.Point(7, 27);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(50, 18);
             this.labelName.TabIndex = 1;
@@ -209,7 +208,7 @@ namespace PathfinderS
             // 
             this.labelRace.AutoSize = true;
             this.labelRace.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelRace.Location = new System.Drawing.Point(190, 28);
+            this.labelRace.Location = new System.Drawing.Point(175, 28);
             this.labelRace.Name = "labelRace";
             this.labelRace.Size = new System.Drawing.Size(45, 18);
             this.labelRace.TabIndex = 3;
@@ -218,7 +217,7 @@ namespace PathfinderS
             // textBoxRace
             // 
             this.textBoxRace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxRace.Location = new System.Drawing.Point(237, 24);
+            this.textBoxRace.Location = new System.Drawing.Point(220, 24);
             this.textBoxRace.Name = "textBoxRace";
             this.textBoxRace.Size = new System.Drawing.Size(90, 26);
             this.textBoxRace.TabIndex = 2;
@@ -227,7 +226,7 @@ namespace PathfinderS
             // 
             this.labelLevel.AutoSize = true;
             this.labelLevel.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelLevel.Location = new System.Drawing.Point(577, 28);
+            this.labelLevel.Location = new System.Drawing.Point(546, 28);
             this.labelLevel.Name = "labelLevel";
             this.labelLevel.Size = new System.Drawing.Size(45, 18);
             this.labelLevel.TabIndex = 7;
@@ -236,7 +235,7 @@ namespace PathfinderS
             // textBoxLevel
             // 
             this.textBoxLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxLevel.Location = new System.Drawing.Point(624, 24);
+            this.textBoxLevel.Location = new System.Drawing.Point(592, 24);
             this.textBoxLevel.Name = "textBoxLevel";
             this.textBoxLevel.Size = new System.Drawing.Size(31, 26);
             this.textBoxLevel.TabIndex = 6;
@@ -246,7 +245,7 @@ namespace PathfinderS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F);
-            this.label2.Location = new System.Drawing.Point(480, 28);
+            this.label2.Location = new System.Drawing.Point(452, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 18);
             this.label2.TabIndex = 5;
@@ -255,7 +254,7 @@ namespace PathfinderS
             // textBoxExp
             // 
             this.textBoxExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxExp.Location = new System.Drawing.Point(517, 24);
+            this.textBoxExp.Location = new System.Drawing.Point(489, 24);
             this.textBoxExp.Name = "textBoxExp";
             this.textBoxExp.Size = new System.Drawing.Size(55, 26);
             this.textBoxExp.TabIndex = 4;
@@ -433,7 +432,7 @@ namespace PathfinderS
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F);
-            this.label4.Location = new System.Drawing.Point(569, 387);
+            this.label4.Location = new System.Drawing.Point(455, 396);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 18);
             this.label4.TabIndex = 27;
@@ -442,7 +441,7 @@ namespace PathfinderS
             // textBoxHP
             // 
             this.textBoxHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxHP.Location = new System.Drawing.Point(566, 409);
+            this.textBoxHP.Location = new System.Drawing.Point(452, 418);
             this.textBoxHP.Name = "textBoxHP";
             this.textBoxHP.Size = new System.Drawing.Size(38, 26);
             this.textBoxHP.TabIndex = 26;
@@ -504,7 +503,7 @@ namespace PathfinderS
             // 
             this.labelClass.AutoSize = true;
             this.labelClass.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelClass.Location = new System.Drawing.Point(335, 28);
+            this.labelClass.Location = new System.Drawing.Point(312, 28);
             this.labelClass.Name = "labelClass";
             this.labelClass.Size = new System.Drawing.Size(48, 18);
             this.labelClass.TabIndex = 30;
@@ -513,7 +512,7 @@ namespace PathfinderS
             // textBoxClassC
             // 
             this.textBoxClassC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxClassC.Location = new System.Drawing.Point(385, 24);
+            this.textBoxClassC.Location = new System.Drawing.Point(362, 24);
             this.textBoxClassC.Name = "textBoxClassC";
             this.textBoxClassC.Size = new System.Drawing.Size(88, 26);
             this.textBoxClassC.TabIndex = 29;
@@ -795,20 +794,10 @@ namespace PathfinderS
             this.labelPlus2.TabIndex = 43;
             this.labelPlus2.Text = "+";
             // 
-            // labelAC
-            // 
-            this.labelAC.AutoSize = true;
-            this.labelAC.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelAC.Location = new System.Drawing.Point(6, 25);
-            this.labelAC.Name = "labelAC";
-            this.labelAC.Size = new System.Drawing.Size(95, 18);
-            this.labelAC.TabIndex = 56;
-            this.labelAC.Text = "Armor Class";
-            // 
             // textBoxACtotal
             // 
             this.textBoxACtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxACtotal.Location = new System.Drawing.Point(103, 22);
+            this.textBoxACtotal.Location = new System.Drawing.Point(8, 29);
             this.textBoxACtotal.Name = "textBoxACtotal";
             this.textBoxACtotal.ReadOnly = true;
             this.textBoxACtotal.Size = new System.Drawing.Size(31, 26);
@@ -819,7 +808,7 @@ namespace PathfinderS
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 12F);
-            this.label15.Location = new System.Drawing.Point(135, 25);
+            this.label15.Location = new System.Drawing.Point(40, 32);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(17, 18);
             this.label15.TabIndex = 57;
@@ -828,7 +817,7 @@ namespace PathfinderS
             // textBoxAC2
             // 
             this.textBoxAC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxAC2.Location = new System.Drawing.Point(207, 22);
+            this.textBoxAC2.Location = new System.Drawing.Point(112, 29);
             this.textBoxAC2.Name = "textBoxAC2";
             this.textBoxAC2.Size = new System.Drawing.Size(31, 26);
             this.textBoxAC2.TabIndex = 60;
@@ -837,7 +826,7 @@ namespace PathfinderS
             // textBoxAC1
             // 
             this.textBoxAC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxAC1.Location = new System.Drawing.Point(154, 22);
+            this.textBoxAC1.Location = new System.Drawing.Point(59, 29);
             this.textBoxAC1.Name = "textBoxAC1";
             this.textBoxAC1.Size = new System.Drawing.Size(31, 26);
             this.textBoxAC1.TabIndex = 58;
@@ -847,7 +836,7 @@ namespace PathfinderS
             // 
             this.labelPlus4.AutoSize = true;
             this.labelPlus4.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelPlus4.Location = new System.Drawing.Point(186, 25);
+            this.labelPlus4.Location = new System.Drawing.Point(91, 32);
             this.labelPlus4.Name = "labelPlus4";
             this.labelPlus4.Size = new System.Drawing.Size(17, 18);
             this.labelPlus4.TabIndex = 59;
@@ -857,7 +846,7 @@ namespace PathfinderS
             // 
             this.labelPlus5.AutoSize = true;
             this.labelPlus5.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelPlus5.Location = new System.Drawing.Point(239, 25);
+            this.labelPlus5.Location = new System.Drawing.Point(144, 32);
             this.labelPlus5.Name = "labelPlus5";
             this.labelPlus5.Size = new System.Drawing.Size(17, 18);
             this.labelPlus5.TabIndex = 61;
@@ -867,7 +856,7 @@ namespace PathfinderS
             // 
             this.labelAC1.AutoSize = true;
             this.labelAC1.Font = new System.Drawing.Font("Arial", 8F);
-            this.labelAC1.Location = new System.Drawing.Point(153, 9);
+            this.labelAC1.Location = new System.Drawing.Point(58, 16);
             this.labelAC1.Name = "labelAC1";
             this.labelAC1.Size = new System.Drawing.Size(37, 14);
             this.labelAC1.TabIndex = 55;
@@ -878,7 +867,7 @@ namespace PathfinderS
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 8F);
-            this.label17.Location = new System.Drawing.Point(204, 9);
+            this.label17.Location = new System.Drawing.Point(109, 16);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(36, 14);
             this.label17.TabIndex = 62;
@@ -889,7 +878,7 @@ namespace PathfinderS
             // 
             this.labelAC4.AutoSize = true;
             this.labelAC4.Font = new System.Drawing.Font("Arial", 8F);
-            this.labelAC4.Location = new System.Drawing.Point(310, 8);
+            this.labelAC4.Location = new System.Drawing.Point(212, 15);
             this.labelAC4.Name = "labelAC4";
             this.labelAC4.Size = new System.Drawing.Size(35, 14);
             this.labelAC4.TabIndex = 69;
@@ -900,7 +889,7 @@ namespace PathfinderS
             // 
             this.labelAC3.AutoSize = true;
             this.labelAC3.Font = new System.Drawing.Font("Arial", 8F);
-            this.labelAC3.Location = new System.Drawing.Point(259, 8);
+            this.labelAC3.Location = new System.Drawing.Point(165, 15);
             this.labelAC3.Name = "labelAC3";
             this.labelAC3.Size = new System.Drawing.Size(27, 14);
             this.labelAC3.TabIndex = 63;
@@ -911,7 +900,7 @@ namespace PathfinderS
             // 
             this.labelPlus7.AutoSize = true;
             this.labelPlus7.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelPlus7.Location = new System.Drawing.Point(342, 25);
+            this.labelPlus7.Location = new System.Drawing.Point(247, 32);
             this.labelPlus7.Name = "labelPlus7";
             this.labelPlus7.Size = new System.Drawing.Size(17, 18);
             this.labelPlus7.TabIndex = 68;
@@ -920,7 +909,7 @@ namespace PathfinderS
             // textBoxAC4
             // 
             this.textBoxAC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxAC4.Location = new System.Drawing.Point(309, 22);
+            this.textBoxAC4.Location = new System.Drawing.Point(214, 29);
             this.textBoxAC4.Name = "textBoxAC4";
             this.textBoxAC4.Size = new System.Drawing.Size(31, 26);
             this.textBoxAC4.TabIndex = 67;
@@ -929,8 +918,9 @@ namespace PathfinderS
             // textBoxAC3
             // 
             this.textBoxAC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxAC3.Location = new System.Drawing.Point(258, 22);
+            this.textBoxAC3.Location = new System.Drawing.Point(163, 29);
             this.textBoxAC3.Name = "textBoxAC3";
+            this.textBoxAC3.ReadOnly = true;
             this.textBoxAC3.Size = new System.Drawing.Size(31, 26);
             this.textBoxAC3.TabIndex = 65;
             this.textBoxAC3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -939,7 +929,7 @@ namespace PathfinderS
             // 
             this.labelPlus6.AutoSize = true;
             this.labelPlus6.Font = new System.Drawing.Font("Arial", 12F);
-            this.labelPlus6.Location = new System.Drawing.Point(290, 25);
+            this.labelPlus6.Location = new System.Drawing.Point(195, 32);
             this.labelPlus6.Name = "labelPlus6";
             this.labelPlus6.Size = new System.Drawing.Size(17, 18);
             this.labelPlus6.TabIndex = 66;
@@ -949,7 +939,7 @@ namespace PathfinderS
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 12F);
-            this.label18.Location = new System.Drawing.Point(354, 25);
+            this.label18.Location = new System.Drawing.Point(259, 32);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(26, 18);
             this.label18.TabIndex = 70;
@@ -1000,7 +990,7 @@ namespace PathfinderS
             this.groupBoxWeapons.Controls.Add(this.textBoxWeaponMod1);
             this.groupBoxWeapons.Controls.Add(this.labelWeapon1);
             this.groupBoxWeapons.Font = new System.Drawing.Font("Arial", 10F);
-            this.groupBoxWeapons.Location = new System.Drawing.Point(385, 208);
+            this.groupBoxWeapons.Location = new System.Drawing.Point(333, 208);
             this.groupBoxWeapons.Name = "groupBoxWeapons";
             this.groupBoxWeapons.Size = new System.Drawing.Size(284, 173);
             this.groupBoxWeapons.TabIndex = 71;
@@ -1249,7 +1239,7 @@ namespace PathfinderS
             // textBoxFORtotal
             // 
             this.textBoxFORtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxFORtotal.Location = new System.Drawing.Point(84, 23);
+            this.textBoxFORtotal.Location = new System.Drawing.Point(84, 22);
             this.textBoxFORtotal.Name = "textBoxFORtotal";
             this.textBoxFORtotal.ReadOnly = true;
             this.textBoxFORtotal.Size = new System.Drawing.Size(31, 26);
@@ -1260,7 +1250,7 @@ namespace PathfinderS
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 8F);
-            this.label19.Location = new System.Drawing.Point(135, 9);
+            this.label19.Location = new System.Drawing.Point(134, 9);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(34, 14);
             this.label19.TabIndex = 61;
@@ -1341,7 +1331,7 @@ namespace PathfinderS
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 8F);
-            this.label28.Location = new System.Drawing.Point(135, 50);
+            this.label28.Location = new System.Drawing.Point(133, 51);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(34, 14);
             this.label28.TabIndex = 81;
@@ -1361,7 +1351,7 @@ namespace PathfinderS
             // textBoxREF2
             // 
             this.textBoxREF2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxREF2.Location = new System.Drawing.Point(186, 64);
+            this.textBoxREF2.Location = new System.Drawing.Point(186, 66);
             this.textBoxREF2.Name = "textBoxREF2";
             this.textBoxREF2.ReadOnly = true;
             this.textBoxREF2.Size = new System.Drawing.Size(31, 26);
@@ -1371,7 +1361,7 @@ namespace PathfinderS
             // textBoxREF1
             // 
             this.textBoxREF1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxREF1.Location = new System.Drawing.Point(135, 64);
+            this.textBoxREF1.Location = new System.Drawing.Point(135, 66);
             this.textBoxREF1.Name = "textBoxREF1";
             this.textBoxREF1.Size = new System.Drawing.Size(31, 26);
             this.textBoxREF1.TabIndex = 78;
@@ -1495,7 +1485,7 @@ namespace PathfinderS
             this.groupBoxThrows.Controls.Add(this.label27);
             this.groupBoxThrows.Controls.Add(this.textBoxREFtotal);
             this.groupBoxThrows.Font = new System.Drawing.Font("Arial", 10F);
-            this.groupBoxThrows.Location = new System.Drawing.Point(385, 59);
+            this.groupBoxThrows.Location = new System.Drawing.Point(387, 59);
             this.groupBoxThrows.Name = "groupBoxThrows";
             this.groupBoxThrows.Size = new System.Drawing.Size(233, 143);
             this.groupBoxThrows.TabIndex = 97;
@@ -1512,7 +1502,6 @@ namespace PathfinderS
             this.AC.Controls.Add(this.labelAC4);
             this.AC.Controls.Add(this.textBoxACtotal);
             this.AC.Controls.Add(this.labelAC3);
-            this.AC.Controls.Add(this.labelAC);
             this.AC.Controls.Add(this.labelPlus7);
             this.AC.Controls.Add(this.labelPlus5);
             this.AC.Controls.Add(this.textBoxAC4);
@@ -1523,10 +1512,10 @@ namespace PathfinderS
             this.AC.Font = new System.Drawing.Font("Arial", 10F);
             this.AC.Location = new System.Drawing.Point(159, 387);
             this.AC.Name = "AC";
-            this.AC.Size = new System.Drawing.Size(385, 57);
+            this.AC.Size = new System.Drawing.Size(287, 62);
             this.AC.TabIndex = 98;
             this.AC.TabStop = false;
-            this.AC.Text = "AC";
+            this.AC.Text = "Armor Class";
             // 
             // richTextBoxGear
             // 
@@ -1552,7 +1541,7 @@ namespace PathfinderS
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Arial", 12F);
-            this.label38.Location = new System.Drawing.Point(606, 386);
+            this.label38.Location = new System.Drawing.Point(492, 395);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(55, 18);
             this.label38.TabIndex = 102;
@@ -1561,7 +1550,7 @@ namespace PathfinderS
             // textBoxSpeed
             // 
             this.textBoxSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxSpeed.Location = new System.Drawing.Point(617, 409);
+            this.textBoxSpeed.Location = new System.Drawing.Point(503, 418);
             this.textBoxSpeed.Name = "textBoxSpeed";
             this.textBoxSpeed.Size = new System.Drawing.Size(38, 26);
             this.textBoxSpeed.TabIndex = 101;
@@ -1576,7 +1565,7 @@ namespace PathfinderS
             this.statsToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(684, 24);
+            this.menuStripMain.Size = new System.Drawing.Size(634, 24);
             this.menuStripMain.TabIndex = 103;
             this.menuStripMain.Text = "menuStrip1";
             // 
@@ -1619,26 +1608,6 @@ namespace PathfinderS
             this.saveAsToolStripMenuItem.Text = "Save as";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsItem_Click);
             // 
-            // groupBoxSpells
-            // 
-            this.groupBoxSpells.Controls.Add(this.richTextBoxSpecs);
-            this.groupBoxSpells.Font = new System.Drawing.Font("Arial", 10F);
-            this.groupBoxSpells.Location = new System.Drawing.Point(159, 208);
-            this.groupBoxSpells.Name = "groupBoxSpells";
-            this.groupBoxSpells.Size = new System.Drawing.Size(203, 173);
-            this.groupBoxSpells.TabIndex = 101;
-            this.groupBoxSpells.TabStop = false;
-            this.groupBoxSpells.Text = "Special abilities and Spells";
-            // 
-            // richTextBoxSpecs
-            // 
-            this.richTextBoxSpecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.richTextBoxSpecs.Location = new System.Drawing.Point(8, 19);
-            this.richTextBoxSpecs.Name = "richTextBoxSpecs";
-            this.richTextBoxSpecs.Size = new System.Drawing.Size(182, 148);
-            this.richTextBoxSpecs.TabIndex = 99;
-            this.richTextBoxSpecs.Text = "";
-            // 
             // statsToolStripMenuItem
             // 
             this.statsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1650,16 +1619,36 @@ namespace PathfinderS
             // calculateToolStripMenuItem
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.calculateToolStripMenuItem.Text = "Calculate ";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this.CalculateStats_Click);
+            // 
+            // groupBoxSpells
+            // 
+            this.groupBoxSpells.Controls.Add(this.richTextBoxSpecs);
+            this.groupBoxSpells.Font = new System.Drawing.Font("Arial", 10F);
+            this.groupBoxSpells.Location = new System.Drawing.Point(159, 208);
+            this.groupBoxSpells.Name = "groupBoxSpells";
+            this.groupBoxSpells.Size = new System.Drawing.Size(163, 173);
+            this.groupBoxSpells.TabIndex = 101;
+            this.groupBoxSpells.TabStop = false;
+            this.groupBoxSpells.Text = "Special abilities and Spells";
+            // 
+            // richTextBoxSpecs
+            // 
+            this.richTextBoxSpecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.richTextBoxSpecs.Location = new System.Drawing.Point(8, 19);
+            this.richTextBoxSpecs.Name = "richTextBoxSpecs";
+            this.richTextBoxSpecs.Size = new System.Drawing.Size(144, 148);
+            this.richTextBoxSpecs.TabIndex = 99;
+            this.richTextBoxSpecs.Text = "";
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.ClientSize = new System.Drawing.Size(634, 461);
             this.Controls.Add(this.groupBoxSpells);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.textBoxSpeed);
@@ -1684,8 +1673,8 @@ namespace PathfinderS
             this.Controls.Add(this.menuStripMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripMain;
-            this.MaximumSize = new System.Drawing.Size(700, 500);
-            this.MinimumSize = new System.Drawing.Size(700, 500);
+            this.MaximumSize = new System.Drawing.Size(650, 500);
+            this.MinimumSize = new System.Drawing.Size(650, 500);
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PathfinderSaver v.0.1";
@@ -1768,7 +1757,6 @@ namespace PathfinderS
         private System.Windows.Forms.TextBox textBoxMEL2;
         private System.Windows.Forms.TextBox textBoxMEL1;
         private System.Windows.Forms.Label labelPlus2;
-        private System.Windows.Forms.Label labelAC;
         private System.Windows.Forms.TextBox textBoxACtotal;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBoxAC2;

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
@@ -15,7 +8,7 @@ namespace PathfinderS
     {
         Player MainPlayer = new Player();
         string SavedFileName = "";
-     
+
         public mainForm()
         {
             InitializeComponent();
@@ -28,7 +21,18 @@ namespace PathfinderS
             saveFileDialog.Filter = "JSON-files(*.json)|*.json|All files(*.*)|*.*";
         }
 
-        void FillFormFromObject ()
+        void FillFormFromObject()
+        {
+            FillFormMainInfo();
+            FillFormAbilities();
+            FillFormAttacks();
+            FillFormThrows();
+            FillFormWeapons();
+            FillFormArmorClass();
+            FillFormSpecsSpells();
+        }
+
+        void FillFormMainInfo()
         {
             //Set Main info
             textBoxName.Text = MainPlayer.Name;
@@ -38,7 +42,10 @@ namespace PathfinderS
             textBoxLevel.Text = MainPlayer.Level.ToString();
             textBoxHP.Text = MainPlayer.HP.ToString();
             textBoxSpeed.Text = MainPlayer.Speed.ToString();
+        }
 
+        void FillFormAbilities()
+        {
             //Set Mods
             textBoxAb1.Text = MainPlayer.Ability.Base[0].ToString();
             textBoxAb2.Text = MainPlayer.Ability.Base[1].ToString();
@@ -52,7 +59,10 @@ namespace PathfinderS
             textBoxAb10.Text = MainPlayer.Ability.Mods[3].ToString();
             textBoxAb11.Text = MainPlayer.Ability.Mods[4].ToString();
             textBoxAb12.Text = MainPlayer.Ability.Mods[5].ToString();
+        }
 
+        void FillFormAttacks()
+        {
             //Set Attacks group
             textBoxINI1.Text = MainPlayer.Attack.InitiativeBase.ToString();
             textBoxINI2.Text = MainPlayer.Ability.Mods[1].ToString();
@@ -65,7 +75,10 @@ namespace PathfinderS
             textBoxDIST1.Text = MainPlayer.Attack.DistanceBase.ToString();
             textBoxDIST2.Text = MainPlayer.Ability.Mods[1].ToString();
             textBoxDISTtotal.Text = MainPlayer.ComputeDistance().ToString();
+        }
 
+        void FillFormThrows()
+        {
             //Set Throws group
             textBoxFOR1.Text = MainPlayer.Throw.FortitudeBase.ToString();
             textBoxFOR2.Text = MainPlayer.Ability.Mods[2].ToString();
@@ -78,7 +91,10 @@ namespace PathfinderS
             textBoxWILL1.Text = MainPlayer.Throw.WillBase.ToString();
             textBoxWILL2.Text = MainPlayer.Ability.Mods[4].ToString();
             textBoxWILLtotal.Text = MainPlayer.ComputeWill().ToString();
+        }
 
+        void FillFormWeapons()
+        {
             //Set Weapons group
             textBoxWeapon1.Text = MainPlayer.Weapon1.Name;
             textBoxWeaponMod1.Text = MainPlayer.Weapon1.Mod.ToString();
@@ -93,20 +109,37 @@ namespace PathfinderS
             textBoxWeaponCrit2.Text = MainPlayer.Weapon2.Crit;
             textBoxWeaponType2.Text = MainPlayer.Weapon2.Type;
             textBoxWeaponDist2.Text = MainPlayer.Weapon2.Dist;
+        }
 
+        void FillFormArmorClass()
+        {
             //Set Armor Class group
             textBoxAC1.Text = MainPlayer.AC.Mods[0].ToString();
             textBoxAC2.Text = MainPlayer.AC.Mods[1].ToString();
-            textBoxAC3.Text = MainPlayer.AC.Mods[2].ToString();
-            textBoxAC4.Text = MainPlayer.AC.Mods[3].ToString();
+            textBoxAC3.Text = MainPlayer.Ability.Mods[1].ToString();
+            textBoxAC4.Text = MainPlayer.AC.Mods[2].ToString();
             textBoxACtotal.Text = MainPlayer.ComputeArmorClass().ToString();
+        }
 
+        void FillFormSpecsSpells()
+        {
             //Set Specs
             richTextBoxSpecs.Text = MainPlayer.SpecsSpells;
             richTextBoxGear.Text = MainPlayer.Gear;
         }
-
+        
         void ReadFormToObject()
+        {
+            ReadFormMainInfo();
+            ReadFormAbilities();
+            ReadFormAttacks();
+            ReadFormThrows();
+            ReadFormWeapons();
+            ReadFormArmorClass();
+            ReadFormSpecsSpells();
+        }
+
+        void ReadFormMainInfo()
         {
             //Get Main info
             string TxtName = textBoxName.Text;
@@ -117,7 +150,10 @@ namespace PathfinderS
             int TxtHP = CheckCorrectInt(textBoxHP.Text);
             int TxtSpeed = CheckCorrectInt(textBoxSpeed.Text);
             MainPlayer.InitializeMainInfo(TxtName, TxtClass, TxtRace, TxtExp, TxtLvl, TxtHP, TxtSpeed);
+        }
 
+        void ReadFormAbilities()
+        {
             //Get Mods
             int TxtAb1 = CheckCorrectInt(textBoxAb1.Text);
             int TxtAb2 = CheckCorrectInt(textBoxAb2.Text);
@@ -132,19 +168,28 @@ namespace PathfinderS
             int TxtAb11 = CheckCorrectInt(textBoxAb11.Text);
             int TxtAb12 = CheckCorrectInt(textBoxAb12.Text);
             MainPlayer.InitializeAbilities(new Abilities(new int[6] { TxtAb1, TxtAb2, TxtAb3, TxtAb4, TxtAb5, TxtAb6 }, new int[6] { TxtAb7, TxtAb8, TxtAb9, TxtAb10, TxtAb11, TxtAb12 }));
+        }
 
+        void ReadFormAttacks()
+        {
             //Get Attacks group
             int TxtIniBase = CheckCorrectInt(textBoxINI1.Text);
             int TxtMeleeBase = CheckCorrectInt(textBoxMEL1.Text);
             int TxtDistBase = CheckCorrectInt(textBoxDIST1.Text);
             MainPlayer.InitializeAttacks(new Attacks(TxtIniBase, TxtMeleeBase, TxtDistBase));
+        }
 
+        void ReadFormThrows()
+        {
             //Get Throws group
             int TxtForBase = CheckCorrectInt(textBoxFOR1.Text);
             int TxtRefBase = CheckCorrectInt(textBoxREF1.Text);
             int TxtWillBase = CheckCorrectInt(textBoxWILL1.Text);
             MainPlayer.InitializeThrows(new Throws(TxtForBase, TxtRefBase, TxtWillBase));
+        }
 
+        void ReadFormWeapons()
+        {
             //Get Weapons group
             string TxtWpn1Name = textBoxWeapon1.Text;
             int TxtWpn1Mod = CheckCorrectInt(textBoxWeaponMod1.Text);
@@ -160,18 +205,35 @@ namespace PathfinderS
             string TxtWpn2Type = textBoxWeaponType2.Text;
             string TxtWpn2Dist = textBoxWeaponDist2.Text;
             MainPlayer.InitilizeWeapon(new Weapon(TxtWpn1Name, TxtWpn1Mod, TxtWpn1Dmg, TxtWpn1Crit, TxtWpn1Type, TxtWpn1Dist), new Weapon(TxtWpn2Name, TxtWpn2Mod, TxtWpn2Dmg, TxtWpn2Crit, TxtWpn2Type, TxtWpn2Dist));
+        }
 
+        void ReadFormArmorClass()
+        {
             //Get Armor class group
             int TxtAC1 = CheckCorrectInt(textBoxAC1.Text);
             int TxtAC2 = CheckCorrectInt(textBoxAC2.Text);
-            int TxtAC3 = CheckCorrectInt(textBoxAC3.Text);
             int TxtAC4 = CheckCorrectInt(textBoxAC4.Text);
-            MainPlayer.InitilizeArmorClass(new ArmorClass(new int[4] { TxtAC1, TxtAC2, TxtAC3, TxtAC4 }));
+            MainPlayer.InitilizeArmorClass(new ArmorClass(new int[3] { TxtAC1, TxtAC2, TxtAC4 }));
+        }
 
+        void ReadFormSpecsSpells()
+        {
             //Get Specs
             string TxtSpecs = richTextBoxSpecs.Text;
             string TxtGear = richTextBoxGear.Text;
             MainPlayer.InitilizeSpecsGear(TxtSpecs, TxtGear);
+        }
+
+        void CalculateStats_Click(object sender, EventArgs e)
+        {
+            ReadFormAbilities();
+            ReadFormAttacks();
+            ReadFormThrows();
+            ReadFormArmorClass();
+
+            FillFormAttacks();
+            FillFormThrows();
+            FillFormArmorClass();
         }
 
         void NewItem_Click(object sender, EventArgs e)
@@ -221,27 +283,14 @@ namespace PathfinderS
             }
             else MessageBox.Show("File is not found!");
         }
-
-        void CalculateStats_Click(object sender, EventArgs e)
-        {
-            ReadFormToObject();
-
-            textBoxINItotal.Text = MainPlayer.ComputeInitiative().ToString();
-            textBoxMELtotal.Text = MainPlayer.ComputeMelee().ToString();
-            textBoxDISTtotal.Text = MainPlayer.ComputeDistance().ToString();
-            textBoxFORtotal.Text = MainPlayer.ComputeFortitude().ToString();
-            textBoxREFtotal.Text = MainPlayer.ComputeReflex().ToString();
-            textBoxWILLtotal.Text = MainPlayer.ComputeWill().ToString();
-            textBoxACtotal.Text = MainPlayer.ComputeArmorClass().ToString();
-        }
-
+        
         int CheckCorrectInt(string str)
         {
             if (str.Length > 0)
             {
                 for (int i = 0; i < str.Length; i++)
                 {
-                    if (!(Char.IsDigit(str[i]) || str[i] == '-' || str[i] == '+')) return 0; 
+                    if (!(Char.IsDigit(str[i]) || str[i] == '-' || str[i] == '+')) return 0;
                 }
             }
             return Convert.ToInt32(str);

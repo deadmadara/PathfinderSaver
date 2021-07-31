@@ -22,10 +22,8 @@ namespace PathfinderS
     public struct Abilities
     {
         //STR, DEX, CON, INT, WIS, CHA
-        const int ABILITIES_NUM = 6;
         public int[] Base;
         public int[] Mods;
-
         public Abilities (int[] _base, int[] _mods)
         {
             Base = _base;
@@ -37,7 +35,6 @@ namespace PathfinderS
         public int InitiativeBase;
         public int MeleeBase;
         public int DistanceBase;
-
         public Attacks (int i, int m, int d)
         {
             InitiativeBase = i;
@@ -50,7 +47,6 @@ namespace PathfinderS
         public int FortitudeBase;
         public int ReflexBase;
         public int WillBase;
-
         public Throws(int f, int r, int w)
         {
             FortitudeBase = f;
@@ -60,9 +56,7 @@ namespace PathfinderS
     }
     public struct ArmorClass
     {
-        const int AC_NUM = 4;
         public int[] Mods;
-
         public ArmorClass(int[] mods)
         {
             Mods = mods;
@@ -105,7 +99,7 @@ namespace PathfinderS
             Throw = new Throws(0, 0, 0);
             Weapon1 = new Weapon("-", 0, "-", "-", "-", "-");
             Weapon2 = new Weapon("-", 0, "-", "-", "-", "-");
-            AC = new ArmorClass(new int[4] { 0, 0, 0, 0 });
+            AC = new ArmorClass(new int[3] { 0, 0, 0});
             SpecsSpells = "-";
             Gear = "-";
         }
@@ -173,7 +167,7 @@ namespace PathfinderS
         {
                 int res = 0;
             for (int i = 0; i < AC.Mods.Length; i++) res += AC.Mods[i];
-            return res + 10;
+            return res + Ability.Mods[1] + 10;
         }
 
     }
